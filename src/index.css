@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-cream-100 text-charcoal-500 font-body antialiased min-h-screen;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  ::selection {
+    @apply bg-terra-500 text-white;
+  }
+}
+
+@layer components {
+
+  /* Friendly tappable card base */
+  .card-warm {
+    @apply bg-white rounded-3xl border border-warmgray-200 shadow-warm-sm transition-all duration-200 ease-out;
+  }
+
+  .card-warm:hover {
+    @apply shadow-warm -translate-y-0.5;
+  }
+
+  .card-warm:active {
+    @apply scale-[0.98] shadow-warm-sm;
+  }
+
+  /* Primary action button */
+  .btn-primary {
+    @apply bg-terra-500 hover:bg-terra-600 active:scale-[0.97] text-white font-heading font-bold rounded-2xl shadow-warm transition-all duration-150 ease-out px-6 py-3.5 text-base;
+  }
+
+  /* Subtle/secondary button */
+  .btn-subtle {
+    @apply bg-warmgray-100 hover:bg-warmgray-200 active:scale-[0.97] text-charcoal-500 font-body font-semibold rounded-2xl transition-all duration-150 ease-out px-5 py-3 text-sm border border-warmgray-200;
+  }
+
+  /* Badge base */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide;
+  }
+}
+
+/* Custom warm scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDF8F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD4C4;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C65D2C;
+}

@@ -1,0 +1,24 @@
+# Node / Frontend
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+
+# Backend build
+backend/build/
+backend/.gradle/
+backend/bin/
+
+# Logs
+*.log
+startup.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/

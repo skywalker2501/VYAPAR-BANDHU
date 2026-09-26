@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "source": "data.gov.in",
+    "ingestion_date": "2026-09-26T14:07:13.172Z"
+  },
+  "msme_distribution": {
+    "Manufacturing": "32%",
+    "Services": "35%",
+    "Retail_Trade": "33%"
+  },
+  "mudra_loan_stats": {
+    "Shishu_Average_Amount": "₹28,500",
+    "Kishor_Average_Amount": "₹1,45,000",
+    "Tarun_Average_Amount": "₹6,80,000",
+    "Rural_Penetration": "68%"
+  },
+  "local_insights": {
+    "last_updated": "2026-09-26",
+    "competitor_survival_rate": "54% over 3 years in rural hubs",
+    "average_break_even_months": 8
+  }
+}
