@@ -6,6 +6,7 @@ export default defineConfig({
     plugins: [react()],
     server: {
         port: 3000,
-        open: true
+        open: true,
+        allowedHosts: ["appreciation-engineer-moss-scholar.trycloudflare.com"]
     }
 })
