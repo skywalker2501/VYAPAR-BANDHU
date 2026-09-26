@@ -2,6 +2,8 @@ import { calculateFinancials, BUSINESS_CATEGORIES } from "../config/businessRule
 import { translations } from "../i18n";
 import govData from "../data/gov_statistics.json";
 
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8080";
+
 export const aiService = {
     generateResponse: async (message, context) => {
         const { profile, erpData, language, messages } = context;
@@ -20,7 +22,7 @@ export const aiService = {
             messages: cleanMessages
         };
 
-        const res = await fetch("http://localhost:8080/api/v1/ai/chat", {
+        const res = await fetch(`${API_BASE}/api/v1/ai/chat`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
@@ -46,7 +48,7 @@ export const aiService = {
 
     checkHealth: async () => {
         try {
-            const res = await fetch("http://localhost:8080/api/v1/ai/health");
+            const res = await fetch(`${API_BASE}/api/v1/ai/health`);
             if (res.ok) {
                 return await res.json();
             }
